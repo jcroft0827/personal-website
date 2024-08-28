@@ -2,32 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+* {
+  @apply m-0 p-0;
+};
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  @apply bg-backgroundColor;
+};
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+h1 {
+  @apply text-5xl sm:text-6xl lg:text-8xl font-black pt-10 tracking-wider text-center uppercase;
+};
+h2 {
+  @apply text-3xl sm:text-4xl lg:text-5xl font-semibold text-center tracking-wide;
+};
+h3 {
+  @apply text-3xl font-semibold text-center mb-5;
+};
+h4 {
+  @apply text-2xl font-semibold;
+};
+h5 {
+  @apply text-xl mb-5;
+};
+
+/* Lists */
+ul {
+  @apply md:ml-10;
+};
+li {
+  @apply list-disc text-[1.4rem] leading-8 tracking-widest text-primaryColor font-semibold;
+  @apply md:text-[1.5rem] lg:mb-2;
+};
+
+/* Buttons */
+.btn {
+  @apply w-full inline-flex justify-center transition-all ease-in;
+};
+.btn:hover {
+  @apply bg-primaryColor text-secondaryColor;
+};
+.btn-primary {
+  @apply text-2xl py-2 rounded-full bg-secondaryColor text-accentColor;
+};
+.btn-square {
+  @apply text-secondaryColor bg-primaryColor rounded-sm py-1 text-xl;
+};
+.btn-square:hover {
+  @apply shadow shadow-accentColor text-accentColor;
+};
+
+
+/* Link */
+.contact-link {
+  @apply flex text-lg items-center gap-1 text-accentColor mb-2 sm:text-xl;
+};
+.contact-link:hover {
+  @apply text-primaryColor;
+};
+
+.service-container {
+  @apply mb-4;
+};
+
+/* Forms */
+form {
+  @apply max-w-[800px] w-full flex flex-col;
+  @apply md:w-1/2;
+};
+label {
+  @apply text-sm;
+};
+input, textarea {
+  @apply mb-2 rounded-md px-2 py-1 text-secondaryColor;
+};
+
+
+/* Footer */
+.footer-nav-link {
+  @apply text-lg md:text-xl transition-all;
+};
+.footer-nav-link:hover {
+  @apply text-primaryColor;
+};
+.social-link {
+  @apply max-w-10 transition-all;
+};
+.social-link:hover {
+  @apply -translate-x-1 -translate-y-1;
+};
