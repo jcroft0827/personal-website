@@ -61,7 +61,7 @@ export default function AboutMeSection() {
                                     </div>
                                 </div>
 
-                                <Link href={'/'} className="btn btn-square mt-4">Read More</Link>
+                                <Link href={"/"} className="btn btn-square mt-4">Read More</Link>
                             </div>
                             {/* About Me Info Wrapper */}
 

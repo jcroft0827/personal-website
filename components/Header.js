@@ -30,7 +30,7 @@ export default function Header() {
                 className="w-full flex justify-between items-center px-5 py-1"
             >
 
-                <Link href={'/'}>
+                <Link href={"/"}>
                     <img src="https://josephcroft-website.s3.amazonaws.com/new_logo.webp" alt="Joseph Croft's Logo" className="w-6"/>
                 </Link>
 

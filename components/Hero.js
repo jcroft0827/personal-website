@@ -50,11 +50,11 @@ export default function Hero() {
                             <div>
                                 <p className="text-accentColor text-2xl max-w-lg text-center mx-auto">
                                     <span className="italic transition-all hover:text-primaryColor">
-                                        <a href="/">Contact me</a>
+                                        <Link href="/">Contact me</Link>
                                     </span> for expert web development, SEO optimization, & responsive design.
                                 </p>
                             </div>
-                        <Link href={'/'} className="btn btn-primary">
+                        <Link href={"/"} className="btn btn-primary">
                             Let's Connect
                         </Link>
                     </div>
