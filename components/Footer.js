@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContactForm from "./ContactForm";
 
 export default function Footer() {
     return (
@@ -28,52 +29,7 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    <form id="footerContactForm">
-                        <label>Name</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Enter your name"
-                            required
-                        />
-
-                        <label>Phone Number</label>
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            placeholder="Enter your number"
-                            required
-                        />
-
-                        <label>Email Address</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Enter your email"
-                            required
-                        />
-
-                        <label>Brief Description Of Project</label>
-                        <textarea
-                            type="text"
-                            id="description"
-                            name="description"
-                            placeholder="Enter your message"
-                            required
-                        />
-
-                        <button
-                            type="submit"
-                            id="submit"
-                            name="submit"
-                            className="btn bg-primaryColor text-secondaryColor rounded-md mt-2 py-2 text-lg hover:-translate-y-1 hover:shadow-sm hover:shadow-accentColor hover:text-accentColor"
-                        >
-                            Submit
-                        </button>
-                    </form>
+                    <ContactForm />
                 </div>
                 {/* Footer Contact Form */}
 
@@ -83,7 +39,7 @@ export default function Footer() {
                     >
                         <div id="footerNav" className="flex gap-10">
                             <Link href={"/"} className="footer-nav-link">Home</Link>
-                            <Link href={"/"} className="footer-nav-link">About</Link>
+                            <Link href={"/about-me"} className="footer-nav-link">About</Link>
                             <Link href={"/"} className="footer-nav-link">Blog</Link>
                         </div>
 

@@ -36,7 +36,7 @@ export default function Header() {
 
                 <nav className="hidden sm:flex gap-4 tracking-wider uppercase">
                     <div id="headerNavLinkContainer" className="flex gap-4">
-                        <Link href={"/"} className={inactiveLink}>About Me</Link>
+                        <Link href={"/about-me"} className={inactiveLink}>About Me</Link>
                         <Link href={"/"} className={inactiveLink}>Blogs</Link>
                     </div>
                     <div id="divider" className="min-w-[.1rem] bg-primaryColor max-h-[1.5rem]"></div>
