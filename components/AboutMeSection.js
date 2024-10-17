@@ -1,12 +1,14 @@
 import Link from "next/link";
+import { easeIn, easeInOut, motion } from 'framer-motion';
 
 export default function AboutMeSection() {
     return (
         <div id="about-me-section" className="w-full my-5 bg-backgroundColor">
-            <div id="about-me-wrapper" className="px-4 md:px-0">
-
+            <motion.div id="about-me-wrapper" className="px-4 md:px-0">
                 <div id="about-me-header">
-                    <h3>About Me</h3>
+                    <h3>
+                        About Me
+                    </h3>
                 </div>
                 {/* About Me Header */}
 
@@ -21,8 +23,8 @@ export default function AboutMeSection() {
                                 className="rounded-sm border border-accentColor overflow-hidden flex items-end mx-auto md:mx-0 sm:rounded-full sm:w-52 sm:h-52"
                             >
                                 <img
-                                    src="https://josephcroft-website.s3.amazonaws.com/Hero_Image.webp"
-                                    alt="Two business men shaking hands over a website development job"
+                                    src="https://josephcroft-website.s3.amazonaws.com/JosephCroft_Vector_2.png"
+                                    alt="Image of Joseph Croft"
                                     id="about-me-img"
                                     className="w-full"
                                 />
@@ -64,7 +66,6 @@ export default function AboutMeSection() {
                                 <Link href={"/"} className="btn btn-square mt-4">Read More</Link>
                             </div>
                             {/* About Me Info Wrapper */}
-
                         </div>
 
                         <div id="about-me-text-wrapper"
@@ -87,7 +88,7 @@ export default function AboutMeSection() {
 
                 </div>
                 {/* About Me Body */}
-            </div>
+            </motion.div>
         </div>
     )
 }

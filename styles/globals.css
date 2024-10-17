@@ -8,6 +8,9 @@
 body {
   @apply bg-backgroundColor scroll-smooth;
 };
+html {
+  @apply scroll-smooth;
+};
 
 h1 {
   @apply text-5xl sm:text-6xl lg:text-8xl font-black pt-10 tracking-wider text-center uppercase;
@@ -88,12 +91,6 @@ input, textarea {
 
 
 /* Footer */
-.footer-nav-link {
-  @apply text-lg md:text-xl transition-all;
-};
-.footer-nav-link:hover {
-  @apply text-primaryColor;
-};
 .social-link {
   @apply max-w-10 transition-all;
 };

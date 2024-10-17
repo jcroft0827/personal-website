@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 
@@ -16,6 +17,8 @@ export default function Header() {
         }
     }
 
+    const router = useRouter();
+
     // Used to style the nav links and distinguish between an inactive and active state
     const inactiveLink = "p-5 transition-all border-b border-secondaryColor/50 sm:p-0 sm:border-b-0 sm:hover:text-primaryColor";
     const activeLink = inactiveLink + " text-primaryColor";
@@ -30,13 +33,13 @@ export default function Header() {
                 className="w-full flex justify-between items-center px-5 py-1"
             >
 
-                <Link href={"/"}>
+                <Link href={"/"} className="z-20">
                     <img src="https://josephcroft-website.s3.amazonaws.com/new_logo.webp" alt="Joseph Croft's Logo" className="w-6"/>
                 </Link>
 
                 <nav className="hidden sm:flex gap-4 tracking-wider uppercase">
                     <div id="headerNavLinkContainer" className="flex gap-4">
-                        <Link href={"/about-me"} className={inactiveLink}>About Me</Link>
+                        <Link href={"/about-me"} className={router.pathname.includes("/about-me") ? activeLink : inactiveLink}>About Me</Link>
                         <Link href={"/"} className={inactiveLink}>Blogs</Link>
                     </div>
                     <div id="divider" className="min-w-[.1rem] bg-primaryColor max-h-[1.5rem]"></div>
@@ -53,9 +56,9 @@ export default function Header() {
                 </button>
                 {/* Mobile Hamburger Button */}
 
-                <div className={(open ? "left-0" : "-left-full") + " absolute top-0 bottom-0 min-w-full min-h-screen flex flex-col transition-all ease-linear bg-primaryColor"}>
+                <div className={(open ? "left-0" : "-left-full") + " absolute top-0 bottom-0 min-w-full min-h-screen flex flex-col transition-all ease-linear bg-secondaryColor"}>
                     <div id="mobile-nav-link-container" className="flex flex-col mt-11">
-                        <Link href={"/"} className={inactiveLink}>About Me</Link>
+                        <Link href={"/about-me"} className={inactiveLink}>About Me</Link>
                         <Link href={"/"} className={inactiveLink}>Blogs</Link>
                     </div>
                     <div id="mobile-contact-container">

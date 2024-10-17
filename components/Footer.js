@@ -1,12 +1,22 @@
 import Link from "next/link";
 import ContactForm from "./ContactForm";
+import { useRouter } from "next/router";
+
 
 export default function Footer() {
+    
+    const router = useRouter();
+    
+    const inactiveLink = "text-lg transition-all md:text-xl hover:text-primaryColor";
+    const activeLink = inactiveLink + " text-primaryColor";
+    
     return (
-        <div id="footerSection"
+        <div 
+            id="footerSection"
             className="bg-secondaryColor text-accentColor"
         >
-            <div id="footerContainer"
+            <div 
+                id="footerContainer"
                 className="py-8 px-4 mx-auto max-w-[64rem]"
             >
                 <div id="footerContactFormContainer"
@@ -38,9 +48,19 @@ export default function Footer() {
                         className="flex flex-col justify-center items-center gap-5 sm:flex-row sm:justify-around"
                     >
                         <div id="footerNav" className="flex gap-10">
-                            <Link href={"/"} className="footer-nav-link">Home</Link>
-                            <Link href={"/about-me"} className="footer-nav-link">About</Link>
-                            <Link href={"/"} className="footer-nav-link">Blog</Link>
+                            <Link href={"/"} 
+                                className={router.pathname === "/" ? activeLink : inactiveLink}
+                            >
+                                Home
+                            </Link>
+                            <Link href={"/about-me"} 
+                                className={router.pathname.includes("/about-me") ? activeLink : inactiveLink}
+                            >
+                                About
+                            </Link>
+                            <Link href={"/"} className={router.pathname.includes("/blog") ? activeLink : inactiveLink}>
+                                Blog
+                            </Link>
                         </div>
 
                         <div id="footerSocialsContainer" className="flex max-h-12">
@@ -84,11 +104,11 @@ export default function Footer() {
                         </p>
 
                         <div className="flex gap-5">
-                            <Link href={"/"} className="footer-nav-link">
+                            <Link href={"/terms-of-service"} className="footer-nav-link">
                                 Terms Of Use
                             </Link>
 
-                            <Link href={"/"} className="footer-nav-link">
+                            <Link href={"/privacy-policy"} className="footer-nav-link">
                                 Privacy Policy
                             </Link>
                         </div>
