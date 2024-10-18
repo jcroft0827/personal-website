@@ -3,11 +3,11 @@ import { useState } from "react"
 
 export default function ContactForm() {
 
-    const [ name, setName ] = useState('');
-    const [ number, setNumber ] = useState('');
-    const [ email, setEmail ] = useState('');
-    const [ description, setDescription ] = useState('');
-    const [ formStatus, setFormStatus ] = useState('');
+    const [name, setName] = useState('');
+    const [number, setNumber] = useState('');
+    const [email, setEmail] = useState('');
+    const [description, setDescription] = useState('');
+    const [formStatus, setFormStatus] = useState('');
 
     async function handleSubmit(ev) {
         ev.preventDefault();
@@ -16,27 +16,26 @@ export default function ContactForm() {
 
         const data = {
             name,
-            number, 
-            email, 
+            number,
+            email,
             description,
         };
 
         try {
             await axios.post('/api/sendEmail', data);
+            setFormStatus('Congratulations on taking the first step to increasing your online presence!');
         } catch (error) {
             setFormStatus('There was a problem submitting your information. Please try again!')
             console.log('Issue sending email: ' + error.message);
         }
 
 
-            setFormData({
-                name: '',
-                number: '',
-                email: '',
-                description: '',
-            })
-            setFormStatus('Congratulations on taking the first step to increasing your online presence!');
-
+        // setFormData({
+        //     name: '',
+        //     number: '',
+        //     email: '',
+        //     description: '',
+        // })
     };
 
     return (
@@ -76,7 +75,7 @@ export default function ContactForm() {
                         placeholder="Enter your number"
                         aria-labelledby="phoneLabel"
                         value={number}
-                        onChange={(ev) => setNumber(ev.target.value)}                        required
+                        onChange={(ev) => setNumber(ev.target.value)} required
                     />
                 </div>
                 {/* Phone Number */}

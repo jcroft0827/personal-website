@@ -13,7 +13,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Joseph Croft Web Development Website</title>
+        <title>Joseph Croft Web Development Website</title>  
+        <meta property="og:title" content="Joseph Croft Web Development Website" key="title" />
       </Head>
       <Header />
       <Hero />
