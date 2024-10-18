@@ -66,7 +66,7 @@ export default function Footer() {
                         <div id="footerSocialsContainer" className="flex max-h-12">
                             <a 
                                 target="_blank" 
-                                href={"/https://www.facebook.com/JosephCroft0829/"} 
+                                href={"https://www.facebook.com/JosephCroft0829/"} 
                                 id="socialLink" className="social-link"
                                 rel="noopener noreferrer"
                             >
@@ -78,7 +78,7 @@ export default function Footer() {
 
                             <a
                                 target="_blank"
-                                href={"/https://www.instagram.com/insta.josephcroft/"} 
+                                href={"https://www.instagram.com/insta.josephcroft/"} 
                                 id="socialLink" className="social-link"
                                 rel="noopener noreferrer"
                             >
@@ -90,7 +90,7 @@ export default function Footer() {
 
                             <a 
                                 target="_blank"
-                                href={"/https://x.com/JoeCrof14616865"} 
+                                href={"https://x.com/JoeCrof14616865"} 
                                 id="socialLink" className="social-link"
                                 rel="noopener noreferrer"
                             >
@@ -102,7 +102,7 @@ export default function Footer() {
 
                             <a 
                                 target="_blank"
-                                href={"/https://www.linkedin.com/in/joseph-croft-b66940135/"} 
+                                href={"https://www.linkedin.com/in/joseph-croft-b66940135/"} 
                                 id="socialLink" className="social-link"
                                 rel="noopener noreferrer"
                             >
