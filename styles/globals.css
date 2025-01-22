@@ -13,10 +13,10 @@ html {
 };
 
 h1 {
-  @apply text-5xl sm:text-6xl lg:text-8xl font-black pt-10 tracking-wider text-center uppercase;
+  @apply text-5xl font-black tracking-widest uppercase md:text-7xl lg:text-[7rem];
 };
 h2 {
-  @apply text-3xl sm:text-4xl lg:text-5xl font-semibold text-center tracking-wide;
+  @apply text-xl sm:text-2xl md:text-3xl text-start font-semibold tracking-wide;
 };
 h3 {
   @apply text-3xl font-semibold text-center mb-5;
@@ -76,7 +76,7 @@ li {
 
 /* Forms */
 form {
-  @apply max-w-[800px] w-full flex flex-col;
+  @apply max-w-[800px] w-full flex flex-col mx-auto;
   /* @apply md:w-1/2; */
 };
 form div {

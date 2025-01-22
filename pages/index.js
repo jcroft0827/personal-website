@@ -1,12 +1,8 @@
-import AboutMeSection from "@/components/AboutMeSection";
-// import Testimonies from "@/components/Testimonies";
 import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Services from "@/components/Services";
+import PortfolioHeader from "@/components/PortfolioHeader";
+import PortfolioHero from "@/components/PortfolioHero";
 import { Inter } from "next/font/google";
 import Head from "next/head";
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -16,11 +12,10 @@ export default function Home() {
         <title>Joseph Croft Web Development Website</title>  
         <meta property="og:title" content="Joseph Croft Web Development Website" key="title" />
       </Head>
-      <Header />
-      <Hero />
-      <AboutMeSection />
-      <Services />
-      {/* <Testimonies /> */}
+      <PortfolioHeader />
+
+      <PortfolioHero />
+
       <Footer />
     </>
   );

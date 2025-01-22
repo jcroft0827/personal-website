@@ -20,24 +20,27 @@ export default function Footer() {
                 className="py-8 px-4 mx-auto max-w-[64rem]"
             >
                 <div id="footerContactFormContainer"
-                    className="flex flex-col items-center mb-10 md:flex-row md:justify-center gap-5"
+                    className="mb-10"
                 >
-                    <div id="footerContactFormTextContainer"
+                    {/* <div id="footerContactFormTextContainer"
                         className="flex flex-col items-center text-center"
                     >
                         <h3 className="text-primaryColor mb-0">
                             Let's Collaborate!
                         </h3>
+
                         <p className="text-lg max-w-lg mb-5">
                             I'm excited to work with you and turn your web dreams into a reality. Whether you're an individual, a small business, or a startup, I'm here to help you succeed in the digital world.
                         </p>
+
                         <h4 className="text-primaryColor">
                             Ready to get started?
                         </h4>
+
                         <p className="text-lg max-w-lg">
                             Contact me today, and let's discuss your project!
                         </p>
-                    </div>
+                    </div> */}
 
                     <ContactForm />
                 </div>
@@ -47,7 +50,7 @@ export default function Footer() {
                     <div id="footerNavContainer"
                         className="flex flex-col justify-center items-center gap-5 sm:flex-row sm:justify-around"
                     >
-                        <div id="footerNav" className="flex gap-10">
+                        <div id="footerNav" className="gap-10 hidden">
                             <Link href={"/"} 
                                 className={router.pathname === "/" ? activeLink : inactiveLink}
                             >
@@ -119,11 +122,11 @@ export default function Footer() {
                     {/* Footer Divider */}
 
                     <div id="footerBottomDiv" className="flex flex-col gap-2 items-center sm:flex-row sm:justify-between sm:px-2">
-                        <p className="md:text-xl">
+                        <p className="md:text-xl mx-auto">
                             © 2024 Joseph Croft. All rights reserved
                         </p>
 
-                        <div className="flex gap-5">
+                        <div className="flex gap-5 hidden">
                             <Link href={"/terms-of-service"} className="footer-nav-link">
                                 Terms Of Use
                             </Link>

@@ -105,13 +105,13 @@ export default function ContactForm() {
                         id="descriptionLabel"
                         htmlFor="description"
                     >
-                        Brief Description Of Project
+                        Reason For Contact
                     </label>
                     <textarea
                         type="text"
                         id="description"
                         name="description"
-                        placeholder="Enter a brief description of the project"
+                        placeholder="Reason for contact..."
                         aria-labelledby="descriptionLabel"
                         value={description}
                         onChange={(ev) => setDescription(ev.target.value)}
