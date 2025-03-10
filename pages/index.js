@@ -1,6 +1,9 @@
+import AboutMeSection from "@/components/AboutMeSection";
+import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
-import PortfolioHeader from "@/components/PortfolioHeader";
-import PortfolioHero from "@/components/PortfolioHero";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import Services from "@/components/Services";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
@@ -54,11 +57,16 @@ export default function Home() {
         <meta name="robots" content="index, follow" />
       </Head>
 
-      <PortfolioHeader />
+      <Header />
 
-      <PortfolioHero />
+      <Hero />
+
+      <AboutMeSection />
+
+      <Services />
 
       <Footer />
+
     </>
   );
 }

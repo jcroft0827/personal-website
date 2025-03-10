@@ -66,6 +66,14 @@ export default function PortfolioHero() {
                             </span>
                         </a>
                     </div>
+                
+                </div>
+
+                {/* About Me Blurb */}
+                <div className='max-w-[40rem] mx-auto mb-10 text-accentColor'>
+                    <p className='text-center'>
+                        Hi, I'm Joseph Croft, an experienced IT Support Specialist with 8 years in the field, a junior software developer with a passion for coding, and a junior web developer with 4 years of personal experience creating responsive, user-friendly websites. I'm actively seeking an advanced IT Support role or an entry-level position in software or web development.
+                    </p>
                 </div>
 
                 {/* Specialties */}

@@ -52,7 +52,7 @@ export default function Hero() {
 
                 <div
                     id="hero-inner-head-wrapper"
-                    className="mb-20"
+                    className="mb-20 px-5"
                 >
                     <div>
                         <motion.h1
